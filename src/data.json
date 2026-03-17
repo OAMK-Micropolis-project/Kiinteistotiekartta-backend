@@ -1,6 +1,6 @@
 [
   {
-    "id": "Kiinteistö 1",
+    "id": 1,
     "nimi": "Kiinteistö 1",
     "osoite": "Kiinteistökuja 1",
     "pinta_ala": 1500,
@@ -83,7 +83,7 @@
     "vedenkulutus": {}
   },
   {
-    "id": "Kiinteistö 2",
+    "id": 2,
     "nimi": "Kiinteistö 2",
     "osoite": "Kiinteistökuja 2",
     "pinta_ala": 2000,
@@ -166,7 +166,7 @@
     "vedenkulutus": {}
   },
   {
-    "id": "Kiinteistö 3",
+    "id": 3,
     "nimi": "Mallikiinteistö",
     "osoite": "Kiinteistökuja 1",
     "pinta_ala": 1100,
@@ -217,7 +217,7 @@
     "vedenkulutus": {}
   },
   {
-    "id": "Kiinteistö 4",
+    "id": 4,
     "nimi": "Kiinteistö 4",
     "osoite": "Kiinteistökuja 4",
     "pinta_ala": 950,

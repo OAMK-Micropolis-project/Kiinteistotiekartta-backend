@@ -1,5 +1,5 @@
 export interface kiinteisto {
-  id: string;
+  id: number;
   nimi: string;
   osoite: string;
   pinta_ala: number;
