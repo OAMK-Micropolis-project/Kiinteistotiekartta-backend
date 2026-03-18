@@ -61,5 +61,5 @@ export interface Yllapitokulut {
 
 export interface vuosi_kulut {
   vuosi: number;
-  kulut: number;
+  arvo: number;
 }

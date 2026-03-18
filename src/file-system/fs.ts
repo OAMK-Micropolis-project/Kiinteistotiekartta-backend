@@ -18,16 +18,22 @@ export function getDataById(id: number): kiinteisto.kiinteisto | null {
 }
 
 export function addData(newData: kiinteisto.kiinteisto): void {
-  // This is a placeholder function. In a real application, you would implement logic to add data to your data source.
-  console.log("Data received:", newData);
+  newData.id = kiinteistot.length > 0 ? Math.max(...kiinteistot.map(k => k.id)) + 1 : 1;
+  kiinteistot.push(newData);
+  updateDataFile();
 }
 
 export function updateData(
   id: number,
   updatedData: kiinteisto.kiinteisto,
 ): void {
-  // This is a placeholder function. In a real application, you would implement logic to update data in your data source.
-  console.log(`Data with ID ${id} updated:`, updatedData);
+  for (let i = 0; i < kiinteistot.length; i++) {
+    if (kiinteistot[i]?.id === id) {
+      kiinteistot[i] = { ...kiinteistot[i], ...updatedData, id };
+      updateDataFile();
+      return
+    }
+  }
 }
 
 export function deleteData(id: number): void {
@@ -37,9 +43,7 @@ export function deleteData(id: number): void {
       break;
     }
   }
-
   updateDataFile();
-  console.log(`Data with ID ${id} deleted`);
 }
 
 export async function initializeData(): Promise<number> {
